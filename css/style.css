@@ -1,0 +1,14 @@
+:root{
+    --cell-size: 50px;
+}
+
+.gridContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gridContainer .cell{
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid black;
+}
