@@ -16,16 +16,27 @@ function createGrid(Hcells, VCells) {
     for (let i = 1; i <= totalCells; i++) {
         // Creo un div con create element per rappresentare uan singola cella
         const cell = document.createElement('div');
+        
         cell.classList.add("cell");
+        
         gridContainer.style.width = `calc(var(--cell-size)* ${Hcells})`;
+
+        cell.innerHTML = `<span>${i}</span>`;
+
+        cell.addEventListener("click", function () {
+
+            console.log("hai cliccato il numero", this.innerText);
+
+            const numero = parseInt(this.innerText);
+            if(numero >= i){
+                this.classList.add("even");
+
+            }
+
+        });
+
         gridContainer.append(cell);
-        cell.innerHTML = `<span>${i}</span>`
-    }
+    };
+};
 
-
-
-
-}
-
-
-createGrid(10, 10); 
+    createGrid(10, 10); 

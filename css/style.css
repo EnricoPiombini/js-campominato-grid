@@ -13,3 +13,7 @@
     height: var(--cell-size);
     border: 1px solid black;
 }
+
+.even{
+    background-color: rgb(106, 106, 207);
+}
